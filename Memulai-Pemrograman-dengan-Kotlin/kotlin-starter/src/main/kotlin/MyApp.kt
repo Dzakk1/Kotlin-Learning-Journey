@@ -1,3 +1,5 @@
+import kotlin.random.Random
+
 fun main(){
 
     // TIPE DATA
@@ -54,4 +56,20 @@ fun main(){
     }
 
     println("Office is open : $isOpen")
+
+    fun getRegisterNumber() = Random.nextInt(100)
+
+    val registerNumber = when(val regis = getRegisterNumber()){
+        in 1..50 -> 50 * regis
+        in 51..100 -> 100 * regis
+        else -> regis
+    }
+
+
+    // FOR
+    val ranges = 1..5
+    for (i in ranges) {
+        println("value is $i")
+    }
+
 }
